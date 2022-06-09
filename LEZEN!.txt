@@ -1,0 +1,3 @@
+Oke dus, die .gitignore file in de "PlayerMovementScene" folder
+Kopier die en plak het in je eigen Unity Folder.
+Zo voorkom je dat deze shit nog een keer opnieuw moet 😭
