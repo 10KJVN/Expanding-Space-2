@@ -1,3 +1,6 @@
-Oke dus, die .gitignore file in de "PlayerMovementScene" folder
+Oke dus, die .gitignore file in de "PlayerMovementScene" map staat.
 Kopier die en plak het in je eigen Unity Folder.
+
+NOGMAALS, ".gitignore" in je UNITY map/folder, als je hulp nodig hebt baar me
+
 Zo voorkom je dat deze shit nog een keer opnieuw moet 😭
