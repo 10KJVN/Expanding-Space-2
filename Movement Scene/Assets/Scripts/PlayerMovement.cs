@@ -4,21 +4,22 @@ using UnityEngine;
 
 //Deze Getallen kan je zelf invoeren in de Inspector van Unity. (Basis Values.)
 
-//Move speed = 6 (zou ik niet veranderen, maar kan wel.)
+//Belangrijk! geef de vloer, map of environment een Layer.
+//Selecteer die layer dan in ground check. Zo val je niet door de vloer.
+
+//Move speed = 6 
 //Air Multiplier = 0.4
-//Walk Speed = 4 (Past aan hoe snel je loopt)
-//Sprint Speed = 6 (Past aan hoe snel je rent)
+//Walk Speed = 4 
+//Sprint Speed = 6 (Speed met Shift.)
 //Acceleration = 10
-//Jump Force = 14 (Past aan hoe hoog je springt.)
+//Jump Force = 14 (Hoe hoog je springt.)
+//Ground Drag = 6 
+//Air Drag = 2 (Hoe lang je in de lucht blijft.)
+
+//Keybinds
+
 //Jump Key = Space 
 //Sprint Key = Left Shift
-//Ground Drag = 6 
-//Air Drag = 2 (Past aan hoe lang je in de lucht blijft)
-
-//Zet in Orientation de Orientation
-//Sleep de Ground Check in Ground check
-//Selecteer Ground in Ground Mask, als dat er niet is. 
-//Pas dan de vloer in je Unity Scene aan in de Inspector staat "Layer" > Add Layer > Ground
 
 public class PlayerMovement : MonoBehaviour
 {
