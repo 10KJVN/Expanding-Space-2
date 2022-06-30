@@ -1508,7 +1508,6 @@ GameObject:
   - component: {fileID: 4599609936885346431}
   - component: {fileID: 4599609936885346424}
   - component: {fileID: 4599609936885346425}
-  - component: {fileID: 4599609936885346430}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -1581,20 +1580,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4599609936885346430
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4599609936885346428}
-  m_Material: {fileID: 13400000, guid: f42146a5888053f41adb068efde14db6, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4599609937387099193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4682225334289540625}
   - component: {fileID: 4599609936677160742}
+  - component: {fileID: 8279455277234096592}
   - component: {fileID: 8227069857042602189}
   - component: {fileID: 8227069857042602188}
   - component: {fileID: 8227069857042602187}
@@ -2198,6 +2184,20 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &8279455277234096592
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6740680789065143316}
+  m_Material: {fileID: 13400000, guid: f42146a5888053f41adb068efde14db6, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8227069857042602189
 MonoBehaviour:
   m_ObjectHideFlags: 0
