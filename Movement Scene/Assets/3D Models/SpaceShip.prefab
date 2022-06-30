@@ -30929,7 +30929,7 @@ GameObject:
   - component: {fileID: 516688507804166723}
   - component: {fileID: 784364935287691347}
   m_Layer: 3
-  m_Name: Character
+  m_Name: Character (Spawn point)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
