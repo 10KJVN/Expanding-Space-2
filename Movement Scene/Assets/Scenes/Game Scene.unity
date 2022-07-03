@@ -422,15 +422,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 966064717536725766, guid: e268755fcaa0f534798977762a91642a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.373621
-      objectReference: {fileID: 0}
-    - target: {fileID: 966064717536725766, guid: e268755fcaa0f534798977762a91642a, type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 966064717536725766, guid: e268755fcaa0f534798977762a91642a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 966064717536725766, guid: e268755fcaa0f534798977762a91642a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -125.67148
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 966064717536725766, guid: e268755fcaa0f534798977762a91642a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1883,7 +1883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4682225334289540625, guid: 5ba11546cef27c146a04ac45b11dc219, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.871576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4682225334289540625, guid: 5ba11546cef27c146a04ac45b11dc219, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1891,7 +1891,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4682225334289540625, guid: 5ba11546cef27c146a04ac45b11dc219, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -213.19
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4682225334289540625, guid: 5ba11546cef27c146a04ac45b11dc219, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.33333334
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: ce3edad6916ad994a84cc65b358cc7aa, type: 2}
 --- !u!4 &1906858532

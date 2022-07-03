@@ -5,10 +5,10 @@ using UnityEngine;
 public class PickupController : MonoBehaviour
 {
 
-    public ProjectileGun gunScript;
+    public shooting gunScript;
     public Rigidbody rb;
     public BoxCollider coll;
-    public Transform player, gunContainer, fpsCam;
+    public Transform player, WeaponHolder, fpsCam;
 
     public float pickupRange;
     public float dropForwardForce, dropUpwardForce;
@@ -49,13 +49,13 @@ public class PickupController : MonoBehaviour
         slotFull = true;
 
         //Make a weapon the child of the camera and move it to a default position
-        transform.SetParent(gunContainer);
+        transform.SetParent(WeaponHolder);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.Euler(Vector3.zero);
         transform.localScale = Vector3.one;
 
         //Make Rigidbody kinematic and BoxCollider a trigger
-        rb.isKinematic = true;
+        //rb.isKinematic = true;
         coll.isTrigger = true;
 
         //Enables GunScript
@@ -72,7 +72,7 @@ public class PickupController : MonoBehaviour
         transform.SetParent(null);
 
         //Make Rigidbody kinematic and BoxCollider a trigger
-        rb.isKinematic = false;
+        //rb.isKinematic = false;
         coll.isTrigger = false;
 
         //Gun carries momentum of player
