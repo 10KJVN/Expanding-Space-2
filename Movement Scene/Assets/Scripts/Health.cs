@@ -20,7 +20,7 @@ public class Health : MonoBehaviour
             Application.LoadLevel(Application.loadedLevel);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             TakeDamage(10);
         }

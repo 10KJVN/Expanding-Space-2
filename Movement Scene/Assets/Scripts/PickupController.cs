@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class PickupController : MonoBehaviour
 {
-
     public shooting gunScript;
     public Rigidbody rb;
     public BoxCollider coll;
-    public Transform player, WeaponHolder, fpsCam;
+    public Transform player, WeaponHolder, CameraHolder;
 
+    [Header("Pick-up")]
     public float pickupRange;
-    public float dropForwardForce, dropUpwardForce;
 
+    [Header("Drop")]
+    public float dropForwardForce;
+    public float dropUpwardForce;
+
+    [Header("Keybinds")]
+    [SerializeField] KeyCode equipKey = KeyCode.E;
+    [SerializeField] KeyCode dropKey = KeyCode.Z;
+
+    [Header("On/Off State")]
     public bool equipped;
     public static bool slotFull;
 
@@ -38,10 +46,10 @@ public class PickupController : MonoBehaviour
     {
         //Checks if player is in range and "E" is pressed
         Vector3 distanceToPlayer = player.position - transform.position;
-        if (!equipped && distanceToPlayer.magnitude <= pickupRange && Input.GetKeyDown(KeyCode.E) && !slotFull) pickUp();
+        if (!equipped && distanceToPlayer.magnitude <= pickupRange && Input.GetKey(equipKey) && !slotFull) pickUp();
 
         //Drop if equipped and "Z" is pressed
-        if (equipped && Input.GetKeyDown(KeyCode.Z)) Drop();
+        if (equipped && Input.GetKey(dropKey)) Drop();
     }
     private void pickUp()
     {
@@ -50,12 +58,12 @@ public class PickupController : MonoBehaviour
 
         //Make a weapon the child of the camera and move it to a default position
         transform.SetParent(WeaponHolder);
-        transform.localPosition = Vector3.zero;
-        transform.localRotation = Quaternion.Euler(Vector3.zero);
-        transform.localScale = Vector3.one;
+        transform.localPosition = Vector3.one; //player.position; 
+        transform.localRotation = Quaternion.Euler(Vector3.one); //player.rotation;
+        //transform.localScale = Vector3.one;
 
         //Make Rigidbody kinematic and BoxCollider a trigger
-        //rb.isKinematic = true;
+        rb.isKinematic = true;
         coll.isTrigger = true;
 
         //Enables GunScript
@@ -72,15 +80,15 @@ public class PickupController : MonoBehaviour
         transform.SetParent(null);
 
         //Make Rigidbody kinematic and BoxCollider a trigger
-        //rb.isKinematic = false;
+        rb.isKinematic = false;
         coll.isTrigger = false;
 
         //Gun carries momentum of player
         rb.velocity = player.GetComponent<Rigidbody>().velocity;
 
         //AddForce
-        rb.AddForce(fpsCam.forward * dropForwardForce, ForceMode.Impulse);
-        rb.AddForce(fpsCam.up * dropUpwardForce, ForceMode.Impulse);
+        rb.AddForce(CameraHolder.forward * dropForwardForce, ForceMode.Impulse);
+        rb.AddForce(CameraHolder.up * dropUpwardForce, ForceMode.Impulse);
         //Add random rotation
         float random = Random.Range(-1f, 1f);
         rb.AddTorque(new Vector3(random, random, random)*10);

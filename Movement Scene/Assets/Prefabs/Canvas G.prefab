@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c36622639022f42a7f7d499f90ddac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 1
   healthBar: {fileID: 4407980483710488543}
   healthAmount: 200
 --- !u!1 &4407980483086780421
@@ -59,7 +60,7 @@ GameObject:
   - component: {fileID: 4407980483086780423}
   - component: {fileID: 4407980483086780422}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
