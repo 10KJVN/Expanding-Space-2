@@ -24,6 +24,10 @@ public class PickupController : MonoBehaviour
     public bool equipped;
     public static bool slotFull;
 
+    public float posX; 
+    public float posY;
+    public float posZ;
+
     private void Start()
     {
         //Setup
@@ -58,8 +62,8 @@ public class PickupController : MonoBehaviour
 
         //Make a weapon the child of the camera and move it to a default position
         transform.SetParent(WeaponHolder);
-        transform.localPosition = Vector3.one; //player.position; 
-        transform.localRotation = Quaternion.Euler(Vector3.one); //player.rotation;
+        // transform.localPosition = (Vector3.zero); //Vector3(1, -0.75, 1);
+        transform.localRotation = Quaternion.Euler(-90, 0, -90); //.(Vector3.zero);
         //transform.localScale = Vector3.one;
 
         //Make Rigidbody kinematic and BoxCollider a trigger
