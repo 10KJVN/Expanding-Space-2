@@ -15,18 +15,8 @@ public class Nav : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void GoToMovement()
+    public void QuitGame()
     {
-        SceneManager.LoadScene("Movement");
-    }
-
-    public void GoToShooting()
-    {
-        SceneManager.LoadScene("Shooting");
-    }
-
-    public void GoToUi()
-    {
-        SceneManager.LoadScene("Ui");
+        Application.Quit();
     }
 }
